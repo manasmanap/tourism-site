@@ -123,6 +123,14 @@ body {
 
 }
 
+.btn-animated {
+    animation-name: moveInBotton;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.75s;
+    animation-fill-mode: backwards;
+}
+
 
 .btn:link,
 .btn:visited {
@@ -161,6 +169,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    transition: all .4s;
 
 }
 
@@ -170,5 +179,24 @@ body {
 }
 
 .btn:hover::after {
-    transform: scale(2);
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes moveInBotton {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    
+    }
+
 }
