@@ -4,19 +4,22 @@
     margin-top: -20vh;
 }
 
-.heading-secondary {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-ligth, $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: .2rem;
-    transition: all .2s;
 
-    &:hover {
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-ligth, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+    url(../img/hero.jpg);
+    background-size: cover;
+    margin-top: -10rem;
+
+    transform: skewY(-7deg);
+
+    
+    & > * {
+        transform: skewY(7deg);
     }
+
 }
